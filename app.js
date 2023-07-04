@@ -24,10 +24,10 @@ function pickColor(){
 circle.addEventListener('wheel', (e) => {
 
     if(e.deltaY < 0){
-        setProgress(percent++)
+        setProgress(++percent)
     }
     if(e.deltaY > 0){
-        setProgress(percent--)
+        setProgress(--percent)
     }
     let a = Math.floor(Math.abs(circle.style.strokeDashoffset) % 1445.13)
     if(a == 0){
